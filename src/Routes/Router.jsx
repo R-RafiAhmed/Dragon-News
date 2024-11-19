@@ -3,6 +3,7 @@ import { createBrowserRouter, Navigate } from 'react-router-dom';
 import CatagoryNews from '../Pages/CatagoryNews';
 import Auth from '../Layouts/Auth';
 import Login from '../Pages/Login';
+import Register from '../Pages/Register';
 
 const Router = createBrowserRouter([
     {
@@ -34,7 +35,7 @@ const Router = createBrowserRouter([
         },
         {
           path: "/auth/register",
-          element: <h2>Register</h2>
+          element: <Register></Register>
         }
       ]
     }
