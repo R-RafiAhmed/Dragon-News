@@ -1,12 +1,13 @@
 import { FaEye } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const NewsCard = ({ singleNews }) => {
   const {
+    _id,
     author,
     title,
     details,
     image_url,
-    thumbnail_url,
     rating,
     total_view,
     others_info,
@@ -39,12 +40,13 @@ const NewsCard = ({ singleNews }) => {
       <div className="p-4">
         <h2 className="text-lg font-bold text-gray-800 line-clamp-2">{title}</h2>
         <p className="text-gray-600 mt-2 text-sm line-clamp-3">{details}</p>
-        <a
+        <Link
+          to={`/news/${_id}`}
           href="#"
           className="block mt-4 text-indigo-500 font-semibold hover:underline"
         >
           Read More
-        </a>
+        </Link>
       </div>
 
       {/* Footer */}
